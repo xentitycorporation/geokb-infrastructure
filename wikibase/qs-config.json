@@ -1,0 +1,25 @@
+{
+	"site" : "GeoScience KnowledgeBase" ,
+	"bot_config_file" : "/var/www/html/bot.ini" ,
+	"logfile" : "/var/log/quickstatements/tool.log" ,
+	"sites" : {
+		"GeoScience KnowledgeBase" : {
+			"oauth" : {
+				"language":"en" ,
+				"project":"GeoScience KnowledgeBase" ,
+				"ini_file":"/quickstatements/data/oauth.ini" ,
+				"publicMwOAuthUrl":"http://wiki.demo5280.com/w/index.php?title=Special:OAuth" ,
+				"mwOAuthUrl":"wikibase.svc/w/index.php?title=Special:OAuth" ,
+				"mwOAuthIW":"mw"
+			} ,
+			"server" : "http://wiki.demo5280.com" ,
+			"api" : "http://wiki.demo5280.com/w/api.php" ,
+			"pageBase" : "http://wiki.demo5280.com/wiki/" ,
+			"toolBase" : "https://quickstatements.demo5280.com/" ,
+			"types" : {
+				"P" : { "type":"property" , "ns":"122" , "ns_prefix":"Property:" } ,
+				"Q" : { "type":"item" , "ns":"120" , "ns_prefix":"Item:" }
+			}
+		}
+	}
+}

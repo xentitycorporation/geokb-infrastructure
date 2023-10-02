@@ -1,0 +1,19 @@
+---
+services:
+
+  redis:
+    image: "redis:alpine"
+    container_name: reconciliation_redis
+    expose:
+      - "6379"
+
+  openrefine-wikibase:
+    image: registry.gitlab.com/nfdi4culture/ta1-data-enrichment/openrefine-wikibase:latest
+    container_name: reconciliation_openrefine
+    ports:
+     - "8000:8000"
+    volumes:
+     - ./config.py:/openrefine-wikibase/config.py
+     - ./manifest.json:/openrefine-wikibase/static/manifest.json
+    depends_on:
+     - redis
