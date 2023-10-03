@@ -1,0 +1,23 @@
+{
+    "version": "1.0",
+    "mediawiki": {
+      "name": "GeoKB",
+      "root": "https://geokb.wikibase.cloud/query/sparql/wiki/",
+      "main_page": "https://geokb.wikibase.cloud/query/sparql/wiki/Main_Page",
+      "api": "https://geokb.wikibase.cloud/query/sparql/w/api.php"
+    },
+    "wikibase": {
+      "site_iri": "https://geokb.wikibase.cloud/query/sparql/entity/",
+      "maxlag": 5,
+      "properties": {
+        "instance_of": "P1",
+        "subclass_of": "P2"
+      }
+    },
+    "oauth": {
+      "registration_page": "https://geokb.wikibase.cloud/query/sparql/wiki/Special:OAuthConsumerRegistration/propose"
+    },
+    "reconciliation": {
+      "endpoint": "https://reconcile.demo5280.com/${lang}/api"
+    }
+  }
