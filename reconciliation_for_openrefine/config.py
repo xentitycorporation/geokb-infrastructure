@@ -6,16 +6,16 @@ should be used.
 """
 
 # Endpoint of the MediaWiki API of the Wikibase instance
-mediawiki_api_endpoint = 'https://wiki.demo5280.com/w/api.php'
+mediawiki_api_endpoint = 'https://geokb.wikibase.cloud/w/api.php'
 
 # SPARQL endpoint
-wikibase_sparql_endpoint = 'https://sparql.demo5280.com/proxy/wdqs/bigdata/namespace/wdq/sparql'
+wikibase_sparql_endpoint = 'https://geokb.wikibase.cloud/query/sparql'
 
 # Name of the Wikibase instance
-wikibase_name = 'GeoScience KnowledgeBase'
+wikibase_name = 'GeoKB Cloud'
 
 # URL of the main page of the Wikibase instance
-wikibase_main_page = 'https://wiki.demo5280.com/wiki/Main_Page'
+wikibase_main_page = 'https://geokb.wikibase.cloud/wiki/Main_Page'
 
 # Wikibase namespace ID, used to search for items
 # For Wikidata this is 0, but most by default Wikibase uses 120, which is the default Wikibase 'Item:' namespace
@@ -30,21 +30,21 @@ user_agent = 'OpenRefine-Wikidata reconciliation interface'
 
 # Regexes and group ids to extracts Qids and Pids from URLs
 import re
-q_re = re.compile(r'(<?https?://wiki.demo5280.com/(entity|wiki)/)?(Q[0-9]+)>?')
+q_re = re.compile(r'(<?https?://geokb.wikibase.cloud/(entity|wiki)/)?(Q[0-9]+)>?')
 q_re_group_id = 3
-p_re = re.compile(r'(<?https?://wiki.demo5280.com/(entity/|wiki/Property:))?(P[0-9]+)>?')
+p_re = re.compile(r'(<?https?://geokb.wikibase.cloud/(entity/|wiki/Property:))?(P[0-9]+)>?')
 p_re_group_id = 3
 
 # Identifier space and schema space exposed to OpenRefine.
 # This should match the IRI prefixes used in RDF serialization.
 # Note that you should be careful about using http or https there,
 # because any variation will break comparisons at various places.
-identifier_space = 'https://wiki.demo5280.com/entity/'
-schema_space = 'https://wiki.demo5280.com/prop/direct/'
+identifier_space = 'https://geokb.wikibase.cloud/entity/'
+schema_space = 'https://geokb.wikibase.cloud/prop/direct/'
 
 # Pattern used to form the URL of a Qid.
 # This is only used for viewing so it is fine to use any protocol (therefore, preferably HTTPS if supported)
-qid_url_pattern = 'https://wiki.demo5280.com/wiki/Item:{{id}}'
+qid_url_pattern = 'https://geokb.wikibase.cloud/wiki/Item:{{id}}'
 
 # By default, filter out any items which are instance
 # of a subclass of this class.
@@ -59,7 +59,7 @@ avoid_items_of_class = None
 service_name = 'Reconcile for GeoKB.'
 
 # URL (without the trailing slash) where this server runs
-this_host = 'https://reconcile.demo5280.com'
+this_host = 'https://reconcile2.demo5280.com'
 
 # The default limit on the number of results returned by us
 default_num_results = 25
