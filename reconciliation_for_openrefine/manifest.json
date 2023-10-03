@@ -1,52 +1,48 @@
-
 {
-    "version": "2.0",
-    "mediawiki": {
-      "name": "GeoKB",
-      "root": "https://wiki.demo5280.com/wiki/",
-      "main_page": "https://wiki.demo5280.com/wiki/Main_Page",
-      "api": "https://wiki.demo5280.com/w/api.php"
+  "version": "2.0",
+  "mediawiki": {
+    "name": "GeoKB-cloud",
+    "root": "https://geokb.wikibase.cloud/wiki/",
+    "main_page": "https://geokb.wikibase.cloud/wiki/Main_Page",
+    "api": "https://geokb.wikibase.cloud/w/api.php"
+  },
+  "wikibase": {
+    "site_iri": "https://geokb.wikibase.cloud/entity/",
+    "maxlag": 5,
+    "max_edits_per_minute": 60,
+    "tag": "openrefine-${version}",
+    "properties": {
+      "instance_of": "P1",
+      "subclass_of": "P12"
     },
-    "wikibase": {
-      "site_iri": "https://wiki.demo5280.com/entity/",
-      "maxlag": 5,
-      "max_edits_per_minute": 60,
-      "tag": "openrefine-${version}",
-      "properties": {
-        "instance_of": "P1",
-        "subclass_of": "P12"
-      },
-      "constraints": {
-        "property_constraint_pid": "P2302",
-        "exception_to_constraint_pid": "P2303",
-        "constraint_status_pid": "P2316",
-        "mandatory_constraint_qid": "Q21502408",
-        "suggestion_constraint_qid": "Q62026391",
-        "distinct_values_constraint_qid": "Q21502410"
-      }
-    },
-    "oauth": {
-      "registration_page": "https://wiki.demo5280.com/wiki/Special:OAuthConsumerRegistration/propose"
-    },
-    "entity_types": {
-      "item": {
-         "site_iri": "https://wiki.demo5280.com/entity/",
-         "reconciliation_endpoint": "https://reconcile.demo5280.com/${lang}/api",
-         "mediawiki_api": "https://wiki.demo5280.com/w/api.php"
-      },
-      "property": {
-         "site_iri": "https://wiki.demo5280.com/entity/",
-         "mediawiki_api": "https://wiki.demo5280.com/w/api.php"
-      },
-      "mediainfo": {
-         "site_iri": "https://wiki.demo5280.com/entity/",
-         "reconciliation_endpoint": "https://reconcile.demo5280.com/${lang}/api"
-      }
-    },
-    "editgroups": {
-      "url_schema": "([[:toollabs:editgroups-commons/b/OR/${batch_id}|details]])"
+    "constraints": {
+      "property_constraint_pid": "P2302",
+      "exception_to_constraint_pid": "P2303",
+      "constraint_status_pid": "P2316",
+      "mandatory_constraint_qid": "Q21502408",
+      "suggestion_constraint_qid": "Q62026391",
+      "distinct_values_constraint_qid": "Q21502410"
     }
+  },
+  "oauth": {
+    "registration_page": "https://geokb.wikibase.cloud/wiki/Special:OAuthConsumerRegistration/propose"
+  },
+  "entity_types": {
+    "item": {
+       "site_iri": "https://geokb.wikibase.cloud/entity/",
+       "reconciliation_endpoint": "https://reconcile2.demo5280.com/${lang}/api",
+       "mediawiki_api": "https://geokb.wikibase.cloud/w/api.php"
+    },
+    "property": {
+       "site_iri": "https://geokb.wikibase.cloud/entity/",
+       "mediawiki_api": "https://geokb.wikibase.cloud/w/api.php"
+    },
+    "mediainfo": {
+       "site_iri": "https://geokb.wikibase.cloud/entity/",
+       "reconciliation_endpoint": "https://reconcile2.demo5280.com/${lang}/api"
+    }
+  },
+  "editgroups": {
+    "url_schema": "([[:toollabs:editgroups-commons/b/OR/${batch_id}|details]])"
   }
-  
-
-
+}
